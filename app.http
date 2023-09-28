@@ -1,0 +1,33 @@
+POST http://localhost:4000/user-details
+Content-Type: application/json
+
+{
+    "username" : "Akshay",
+    "age" : 18,
+    "email" : "akkiakshay440@gmail.com",
+    "location" : "Warangal"
+}
+
+###
+
+POST https://service-a-vtdz.onrender.com/user-details
+Content-Type: application/json
+
+{
+    "username" : "Akshay",
+    "age" : 18,
+    "email" : "akkiakshay440@gmail.com",
+    "location" : "Warangal"
+}
+
+###
+
+POST https://service-b-3mki.onrender.com/store-in-db
+Content-Type: application/json
+
+{
+    "username" : "Akshay",
+    "age" : 18,
+    "email" : "akkiakshay440@gmail.com",
+    "location" : "Warangal"
+}
