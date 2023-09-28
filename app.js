@@ -32,18 +32,18 @@ app.post("/user-details", validateUserDetails, async (request, response) => {
         body: JSON.stringify(request.body)
     }
 
-    // try {
+    try {
         const service2Response = await fetch("https://micro-service-b.onrender.com/store-in-db", options)
         // const service2Response = await fetch("http://localhost:5000/store-in-db", options)
-        // if (!service2Response.ok) {
-        //     throw new Error('Failed to store data in Service B');
-        // }
+        if (!service2Response.ok) {
+            throw new Error('Failed to store data in Service B');
+        }
         const data = await service2Response.json()
         response.send(data)
-    // } catch (error) {
-        // console.error('Error:', error.message);
-        // response.status(500).json({ error: 'Service B communication error' });
-    // }
+    } catch (error) {
+        console.error('Error:', error.message);
+        response.status(500).json({ error: 'Service B communication error' });
+    }
 });
 
 app.listen(PORT, () => {
