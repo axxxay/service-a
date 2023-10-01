@@ -1,4 +1,4 @@
-POST http://localhost:4000/user-details
+POST http://localhost:5000/store-in-db
 Content-Type: application/json
 
 {
@@ -10,7 +10,7 @@ Content-Type: application/json
 
 ###
 
-POST https://service-a-vtdz.onrender.com/user-details
+POST https://micro-service-a.onrender.com/user-details
 Content-Type: application/json
 
 {
@@ -22,7 +22,7 @@ Content-Type: application/json
 
 ###
 
-POST https://service-b-3mki.onrender.com/store-in-db
+POST https://micro-service-b.onrender.com/store-in-db
 Content-Type: application/json
 
 {
